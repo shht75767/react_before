@@ -7,19 +7,17 @@
     <title>Document</title>
   </head>
   <body>
-    <span> click count : 0</span>
-    <button class="btn">Click Me!</button>
-    <script>
-      const btn = document.querySelector('.btn');
-      const span = document.querySelector('span');
-
-      let count = 0;
-      function handleCount() {
-        count++;
-        span.innerText = `click count : ${count}`;
-      }
-
-      btn.addEventListener('click', handleCount);
-    </script>
+    <span class="span">total clicks : 0</span>
+    <button class="btn">Click Me</button>
   </body>
+  <script>
+    let counter = 0;
+    const span = document.querySelector('.span');
+    const button = document.querySelector('.btn');
+    function handleClick() {
+      counter = counter + 1;
+      span.innerText = `total clicks : ${counter}`;
+    }
+    button.addEventListener('click', handleClick);
+  </script>
 </html>
